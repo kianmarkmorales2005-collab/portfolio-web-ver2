@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none ;
+    border:none ;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+html{
+font-size:60.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    color: black; 
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("background.jpg") center/cover no-repeat;
+    filter: blur(8px);   
+    z-index: -1;         
+}
+
+
+header{
+margin-top: 20px;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding: 1rem 9%;
+background-color:transparent;
+filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+display:flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+}
+
+
+.logo{
+font-size:3rem;
+color:#6b4bb7;
+font-weight:800;
+cursor:pointer;
+transition:0.5s ease;
+
+
+
+}
+.logo:hover {
+    transform:scale(1.1);
+
+}
+nav a{
+    font-size:2rem;
+    color:black;
+    margin-left:4rem;
+    font-weight:500;
+    transition:0.3s ease;
+    border-bottom:3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color:#6b4bb7;
+    border-bottom:3px solid #6b4bb7;
+}
+
+@media(max-width:995px){
+
+    nav{
+        position:absolute;
+        top:100%;
+        right:0;
+        width:40%;
+        border-left:3px solid #6b4bb7;
+        border-bottom:3px solid #6b4bb7;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: #ffffff;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+
+
+nav .active{
+    display:block;
+}
+nav a{
+    display:block;
+    font-size:2rem;
+    margin:3rem;
+}
+ nav a:hover,
+ nav a.active{
+    padding: 1rem;
+    border-radius:0.5rem;
+    border-bottom:0.5rem solid #6b4bb7;
+
+ }
+}
+section {
+    min-height: 100vh;
+    padding:5rem 9% 5rem;
+
+}
+.home{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap:9rem;
+
+}
+
+.home .home-content h1{
+    font-size:6rem;
+    font-weight:700;
+    line-height:1.3;
+}
+span{
+    color:#6b4bb7;
+
+}
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+
+}
+.home-content p{
+font-size: 15px;
+margin-bottom: 1rem;
+
+}
+.home img{
+    border-radius: 50%
+
+
+}
+.home-img img{
+    position:relative;
+    width: 24vw;
+    border-radius:50%;
+    box-shadow: 0 0 25px #6b4bb7;
+    cursor: pointer;
+    transition:0.2s linear;
+}
+
+
+.home-img img:hover{
+    transform: scale(1.05);
+
+}
+.social-icons a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #6f39b6;
+    font-size:2rem;
+    border-radius: 8px;
+    margin: 3rem 1.5rem 3rem 0;
+    transition:0.3s ease;
+
+}
+.social-icons a:hover{
+    color:#161616;
+    transform:scale(1.3)translateY(-5px);
+}
+
+
+.typing-text{
+    font-size:34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position:relative;
+    white-space: nowrap;
+}
+.typing-text span::before{
+    content:"2nd year Computer Science";
+    color: #6b4bb7;
+    
+
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+    .hobbies-container {
+      max-width: 900px;
+      margin: auto;
+    }
+    .hobbies-container h1 {
+        text-align: center;
+        font-size: 2.5em;
+        color: #333;
+        margin-bottom: 40px;
+    }
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 60px;
+    }
+    .hobby-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .hobby-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .hobby-card .icon {
+        font-size: 3em;
+        margin-bottom: 15px;
+    }
+    .hobby-card h3 {
+        margin: 0;
+        font-size: 1.4em;
+        color: #333;
+    }
+.card-logo {
+    width: 40px;
+}
